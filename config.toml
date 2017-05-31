@@ -1,0 +1,24 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Emilien Mottet"
+
+[params]
+  GithubID = "EmilienMottet"
+  GitlabId = "EmilienMottet"
+#  TwitterID = "your_twitter"
+  LinkedInID = "emilien-mottet-78334611a"
+#  GoogleplusID = "your_googleplus"
+#  FacebookID = "your_facebook"
+  Name = "Emilien Mottet"
+  HeaderUsername = "emilien"
+  HeaderHostname = "blog"
+  Email = "emilien@emottet.com"
+  About = "I'm Emilien Mottet, a developer and a student."
+  ProfilePicture = "/profile.jpg"
+#  GoogleAnalytics = "your_google_analytics_id"
+
+#[menu]
+#[[menu.header]]
+#  name = "posts"
+#  weight = 0
+#  url = "/posts"
