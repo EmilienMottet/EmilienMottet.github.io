@@ -17,6 +17,7 @@ theme = "hugo-theme-nix"
   About = "I'm Emilien Mottet, a developer and a student."
   ProfilePicture = "/profile-emilien.jpg"
 #  GoogleAnalytics = "your_google_analytics_id"
+  PayPalMeID = "https://paypal.me/EmilienMottet"
 
 #[menu]
 #[[menu.header]]
