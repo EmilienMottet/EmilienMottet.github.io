@@ -19,7 +19,8 @@ theme = "hugo-theme-nix"
 #  GoogleAnalytics = "your_google_analytics_id"
   PayPalMeID = "https://paypal.me/EmilienMottet"
   TelegramID = "Bibemi"
-
+  StackOverflowID = "8362635"
+  
 #[menu]
 #[[menu.header]]
 #  name = "posts"
