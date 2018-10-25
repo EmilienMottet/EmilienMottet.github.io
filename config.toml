@@ -18,6 +18,7 @@ theme = "hugo-theme-nix"
   ProfilePicture = "/profile-emilien.jpg"
 #  GoogleAnalytics = "your_google_analytics_id"
   PayPalMeID = "https://paypal.me/EmilienMottet"
+  TelegramID = "Bibemi"
 
 #[menu]
 #[[menu.header]]
