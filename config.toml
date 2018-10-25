@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Emilien Mottet"
+theme = "hugo-theme-nix"
 
 [params]
   GithubID = "EmilienMottet"
@@ -14,7 +15,7 @@ title = "Emilien Mottet"
   HeaderHostname = "blog"
   Email = "emilien@emottet.com"
   About = "I'm Emilien Mottet, a developer and a student."
-  ProfilePicture = "/profile.jpg"
+  ProfilePicture = "/profile-emilien.jpg"
 #  GoogleAnalytics = "your_google_analytics_id"
 
 #[menu]
@@ -22,3 +23,4 @@ title = "Emilien Mottet"
 #  name = "posts"
 #  weight = 0
 #  url = "/posts"
+
