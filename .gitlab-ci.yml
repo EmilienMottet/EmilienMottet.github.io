@@ -1,0 +1,34 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+  - deploy
+
+
+build:
+  stage: build
+  image: monachus/hugo
+  script:
+  - hugo -d public_html
+  artifacts:
+    paths:
+    - public_html
+  only:
+  - source
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  tags:
+  - private
+  before_script:
+    - apk update && apk add openssh-client bash rsync
+  script:
+  - eval $(ssh-agent -s)
+  - bash -c 'ssh-add <(echo "${SSH_PRIVATE_KEY}")'
+  - mkdir -p ~/.ssh
+  - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
+  - rsync -hrvz --delete --exclude=_ -e 'ssh -p 2016' public_html/ "${SSH_USER_HOST_LOCATION}" 
+  only:
+  - source
