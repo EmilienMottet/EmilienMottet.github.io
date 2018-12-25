@@ -28,7 +28,7 @@ deploy:
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
   - echo "toto" > test.txt
-  - scp ./test.txt "${SSH_USER_HOST_LOCATION}" -P 2016 
+  - scp -P 2016 ./test.txt "${SSH_USER_HOST_LOCATION}" 
   - rsync -hrvz --delete --exclude=_ -e 'ssh -p 2016' public_html/ "${SSH_USER_HOST_LOCATION}" 
   only:
   - source
