@@ -24,10 +24,11 @@ deploy:
     - apk update && apk add openssh-client bash rsync
   script:
   - eval $(ssh-agent -s)
-  # - ssh-add < (echo -n "$SSH_PRIVATE_KEY" | base64 --decode)
-  - bash -c "ssh-add <(echo '$SSH_PRIVATE_KEY')"
+  - ssh-add < (echo -n "$SSH_PRIVATE_KEY" )
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
+  - echo "toto" > test.txt
+  - scp toto "${SSH_USER_HOST_LOCATION}" -p 2016 
   - rsync -hrvz --delete --exclude=_ -e 'ssh -p 2016' public_html/ "${SSH_USER_HOST_LOCATION}" 
   only:
   - source
