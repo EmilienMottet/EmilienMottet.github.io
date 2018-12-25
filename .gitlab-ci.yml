@@ -24,7 +24,7 @@ deploy:
     - apk update && apk add openssh-client bash rsync
   script:
   - eval $(ssh-agent -s)
-  - ssh-add < (echo -n "$SSH_PRIVATE_KEY" )
+  - bash -c 'ssh-add <(echo "$SSH_PRIVATE_KEY")'
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
   - echo "toto" > test.txt
