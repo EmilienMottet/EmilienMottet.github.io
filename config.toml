@@ -20,6 +20,7 @@ theme = "hugo-theme-nix"
   PayPalMeID = "EmilienMottet"
   TelegramID = "Bibemi"
   StackOverflowID = "8362635"
+  CvURL = "https://gitlab.emottet.com/EmilienMotte/cv/-/jobs/artifacts/master/raw/pdf/material-dark.pdf?job=pdf"
   
 #[menu]
 #[[menu.header]]
