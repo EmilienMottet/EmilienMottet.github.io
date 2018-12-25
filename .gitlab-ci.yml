@@ -21,10 +21,11 @@ deploy:
   stage: deploy
   image: alpine:latest
   before_script:
-    - apk update && apk add openssh-client rsync
+    - apk update && apk add openssh-client bash rsync
   script:
   - eval $(ssh-agent -s)
-  - ssh-add < (echo -n "$SSH_PRIVATE_KEY" | base64 --decode)
+  # - ssh-add < (echo -n "$SSH_PRIVATE_KEY" | base64 --decode)
+  - bash -c "ssh-add <(echo '$SSH_PRIVATE_KEY')"
   - mkdir -p ~/.ssh
   - echo "${SSH_HOST_KEY}" > ~/.ssh/known_hosts
   - rsync -hrvz --delete --exclude=_ -e 'ssh -p 2016' public_html/ "${SSH_USER_HOST_LOCATION}" 
